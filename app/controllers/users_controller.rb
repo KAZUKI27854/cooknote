@@ -1,19 +1,14 @@
 class UsersController < ApplicationController
   def create
     @user = User.new
-    redirect_to user_path(current_user.id)
   end
 
   def show
+    @user = User.find(params[:id])
   end
 
   def index
-  end
-
-  def edit
-  end
-
-  def update
+    @users = User.all
   end
 
   def destroy

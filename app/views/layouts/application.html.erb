@@ -10,7 +10,11 @@
   </head>
 
   <body>
-   
+    <header>
+      <% if user_signed_in? %>
+        <%= link_to "ユーザー一覧", users_path %>
+      <% end %>
+    </header>
     
     <%= yield %>
   </body>
