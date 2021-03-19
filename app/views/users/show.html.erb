@@ -1,6 +1,10 @@
 <h1>user#show</h1>
 <p>
   ユーザー名：<%= @user.name %>
+  プロフィール画像：<%= attachment_image_tag @user, :profile_image, size: "60x60", fallback: "no_image.jpg" %>
+</p>
+<p>
+  <%= link_to "プロフィール編集", edit_user_path %>
 </p>
 <P>
   投稿数、投稿済みレシピ、いくついいねされたかなど
