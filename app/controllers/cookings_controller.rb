@@ -12,6 +12,7 @@ class CookingsController < ApplicationController
 
   def show
     @cooking = Cooking.find(params[:id])
+    @post_comment = PostComment.new
   end
 
   def index

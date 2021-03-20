@@ -5,5 +5,26 @@
 <li><%= @cooking.ingredients %></li>
 <li><%= @cooking.process %></li>
 
-<li><%= link_to "編集", edit_cooking_path %></li>
-<li><%= link_to "削除", cooking_path, method: :delete %></li>
+<% if current_user.id == @cooking.user.id %>
+  <li><%= link_to "編集", edit_cooking_path %></li>
+  <li><%= link_to "削除", cooking_path, method: :delete %></li>
+<% end %>
+
+<p>コメント：<%= @cooking.post_comments.count %>件</p>
+<% @cooking.post_comments.each do |post_comment| %>
+  <%= attachment_image_tag post_comment.user, :profile_image, size: "50x50" %>
+  <%= post_comment.user.name %>
+  <%= post_comment.comment %>
+  <%= post_comment.created_at.strftime('%Y/%m/%d') %>
+  <% if current_user == post_comment.user %>
+    <%= link_to "削除", cooking_post_comment_path(@cooking, post_comment), method: :delete %>
+  <% end %>
+<% end %>
+
+<%= form_with(model:[@cooking, @post_comment], local: true) do |f| %>
+  <%= f.text_area :comment, rows: '5', placeholder: "コメント入力欄" %>
+  <%= f.submit "投稿する" %>
+<% end %>
+
+
+

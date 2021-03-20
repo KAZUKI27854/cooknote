@@ -9,4 +9,5 @@
   <li>タイトル：<%= cooking.title %></li>
   <li>投稿者：<%= cooking.user.name %></li>
   <li>投稿日時：<%= cooking.created_at.strftime('%Y/%m/%d') %></li>
+  <li><%= link_to "#{cooking.post_comments.count}コメント", cooking_path(cooking.id) %></li>
 <% end %>
