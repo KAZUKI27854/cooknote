@@ -9,12 +9,6 @@ class PostCommentsController < ApplicationController
     redirect_to cooking_path(cooking.id)
   end
 
-  def edit
-  end
-
-  def update
-  end
-
   def destroy
     PostComment.find_by(id: params[:id], cooking_id: params[:cooking_id]).destroy
     redirect_to cookings_path
