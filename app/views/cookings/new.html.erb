@@ -1,0 +1,12 @@
+<h1>cookings#new</h1>
+
+<%= form_with model: @cookings, url: cookings_path, local: true do |f| %>
+  <h4>料理名</h4>
+  <%= f.text_field :title %>
+  <h4>画像</h4>
+  <%= attachment_field @cookings, :cooking_image, size: "100x100" %>
+  <h4>材料</h4>
+  <%= f.text_field :ingredients %>
+  <h4>作り方</h4>
+  <%= f.text_field :process %>
+<% end %>

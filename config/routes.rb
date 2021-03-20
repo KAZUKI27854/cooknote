@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   root to: 'homes#top'
   resources :users, only: [:edit, :update, :destroy, :show, :index]
+  resources :cookings
 end
