@@ -8,4 +8,6 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   
   attachment :profile_image
+  
+  has_many :cookings, dependent: :destroy
 end
