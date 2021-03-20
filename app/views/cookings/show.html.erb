@@ -1,0 +1,9 @@
+<h1>cookings#show</h1>
+
+<li><%= @cooking.title %></li>
+<li><%= attachment_image_tag @cooking, :cooking_image, size: "100x100" %></li>
+<li><%= @cooking.ingredients %></li>
+<li><%= @cooking.process %></li>
+
+<li><%= link_to "編集", edit_cooking_path %></li>
+<li><%= link_to "削除", cooking_path, method: :delete %></li>
