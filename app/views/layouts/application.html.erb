@@ -15,9 +15,10 @@
   </head>
 
   <body>
+    <div class="wrapper">
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
-        <h2 class="nav-header text-light">Cooknote</h2>
+        <h2 class="fas fa-quran nav-header text-light">Cooknote</h2>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
@@ -44,6 +45,9 @@
         <li class="nav-item">
           <%= link_to "ログイン", new_user_session_path, class: 'fas fa-sign-in-alt nav-link text-light' %>
         </li>
+        <li>
+          <%= link_to "ホーム", root_path, class: 'fas fa-home nav-link text-light' %>
+        </li>
       <% end %>
       </ul>
       </div>
@@ -51,5 +55,10 @@
     </header>
 
     <%= yield %>
+
+    <footer class="footer">
+      <p>copyright practice-app</p>
+    </footer>
+  </div>
   </body>
 </html>
