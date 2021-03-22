@@ -27,22 +27,42 @@
 
 .introduction {
  width: 100%;
- background-image: url(yos0039-054.jpg);
- backgroun-size: contain;
+ height: 100%;
+ background-image: url(yos0034-054.jpg);
+ background-size: cover;
 }
 
 .introduction > h1,p {
  text-align: center;
+ color: white;
 }
 
 .introduction > h1 {
  padding-top: 200px;
 }
 
+.links > a {
+ color: white !important;
+}
+
 .sign-in-form,
 .sign-up-form{
+ color: white;
  text-align: center;
- margin-top: 100px;
+ padding-top: 50px;
+ height: 100%;
+}
+
+.sign-up-form {
+ background-image: url(4422790_l.jpg);
+ background-position: center bottom;
+ background-size: cover;
+}
+
+.sign-in-form {
+ background-image: url(salad-2068220_1920.jpg);
+ background-position: 100% 0%;
+ background-size: cover;
 }
 
 .error_messages {
@@ -61,6 +81,7 @@
 
 .wrapper {
   min-height: 100vh;
+  height: 100vh;
   position: relative;
   padding-bottom: 50px;
   box-sizing: border-box;
