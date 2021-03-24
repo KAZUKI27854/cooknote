@@ -1,13 +1,32 @@
-<h1>cooking#new</h1>
+<div class="new-recipe">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-md-2 col-sm-0"></div>
 
-<%= form_with model: @cooking, local:true do |f| %>
-  <label for="inputTitle">料理名</label>
-  <%= f.text_field :title %>
-  <label for="inputImage">画像</label>
-  <%= f.attachment_field :cooking_image, placeholder: "料理の画像" %>
-  <label for="inputIngredients">材料</label>
-  <%= f.text_field :ingredients %>
-  <label for="inputProcess">作り方</label>
-  <%= f.text_field :process %>
-  <%= f.submit '投稿' %>
-<% end %>
+    <div class="col-lg-6 col-md-8 col-sm-12 recipe-post-form">
+      <%= form_with model: @cooking, local:true do |f| %>
+        <div class="form-group mt-2">
+          <label for="inputTitle">料理名</label>
+          <%= f.text_field :title, class: "form-control", placeholder: "料理名" %>
+        </div>
+        <div class="form-group">
+          <label for="inputImage">画像</label>
+          <%= f.attachment_field :cooking_image, class: "form-control-file" %>
+        </div>
+        <div class="form-group">
+          <label for="inputIngredients">材料</label>
+          <%= f.text_area :ingredients, size: "20x5", class: "form-control", placeholder: "材料" %>
+        </div>
+        <div class="form-group">
+          <label for="inputProcess">作り方</label>
+          <%= f.text_area :process, size: "20x7", class: "form-control", placeholder: "作り方" %>
+        </div>
+        <%= f.submit '投稿', class: "btn btn-primary btn-sm" %>
+      <% end %>
+    </div>
+
+    <div class="col-lg-3 col-md-2 col-sm-0"></div>
+  </div>
+</div>
+
+</div>

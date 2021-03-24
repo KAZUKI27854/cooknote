@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @cooking = Cooking.where(user_id: params[:id])
-    @cookings = Cooking.all
+    cooking = Cooking.where(user_id: params[:id])
+    @cookings = cooking.page(params[:page]).reverse_order
   end
 
   def edit

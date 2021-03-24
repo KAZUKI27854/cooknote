@@ -17,6 +17,11 @@
  @import 'font-awesome-sprockets';
  @import 'font-awesome';
 
+* {
+ margin: 0;
+ padding: 0;
+}
+
 html,
 body {
  height: 100vh;
@@ -61,12 +66,14 @@ body {
 }
 
 .sign-up-form {
+ height: 100vh;
  background-image: url(4422790_l.jpg);
  background-position: center bottom;
  background-size: cover;
 }
 
 .sign-in-form {
+ height: 100vh;
  background-image: url(salad-2068220_1920.jpg);
  background-position: 100% 0%;
  background-size: cover;
@@ -76,10 +83,15 @@ body {
  list-style: none;
 }
 
-.my-page {
+.my-page,
+.index {
  overflow: hidden;
  background-image: url(background-2186565_1920.jpg);
  background-size: cover;
+}
+
+.index-header {
+ color: white;
 }
 
 .profile {
@@ -93,6 +105,8 @@ body {
 
 .recipe-container {
  margin-bottom: 20px;
+ height: 100vh;
+ margin-bottom: 150px;
 }
 
 .recipe-card {
@@ -105,12 +119,37 @@ body {
  text-align: center;
 }
 
+.no-recipe-message {
+ height: 100vh;
+ color: white;
+ text-align: center;
+ vertical-align: center;
+}
+
+.pagination {
+ margin-top: 10px;
+ justify-content: center;
+}
+
+.new-recipe {
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ overflow: hidden;
+ background-image: url(cook-2364221_1920.jpg);
+ background-size: cover;
+ background-position: 50% 100%;
+}
+
+.recipe-post-form {
+ color: white;
+}
+
 .wrapper {
  min-height: 100vh;
-
  position: relative;
  padding-bottom: 50px;
- box-sizing: border-box;
+ box-sizing: border-box !important;
 }
 
 .footer {

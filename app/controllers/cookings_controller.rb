@@ -16,7 +16,7 @@ class CookingsController < ApplicationController
   end
 
   def index
-    @cookings = Cooking.all
+    @cookings = Cooking.page(params[:page]).reverse_order
   end
 
   def edit

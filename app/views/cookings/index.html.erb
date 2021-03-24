@@ -1,15 +1,26 @@
-<h1>cookings#index(画像をクリックすると作り方が見られます)</h1>
+<div class="index img-fluid">
+<h1 class="index-header">レシピ一覧</h1>
 
-<% @cookings.each do |cooking| %>
-  <li>
-    <%= link_to  cooking_path(cooking.id) do %>
-      <%= attachment_image_tag cooking, :cooking_image, size: "100x100" %>
-    <% end %>
-  </li>
-  <li>タイトル：<%= cooking.title %></li>
-  <li>投稿者：<%= cooking.user.name %></li>
-  <li>投稿日時：<%= cooking.created_at.strftime('%Y/%m/%d') %></li>
-  <li>
-    <%= link_to "#{cooking.post_comments.count}コメント", cooking_path(cooking.id) %> |
-  </li>
-<% end %>
+<div class="container recipe-container">
+  <div class="row">
+    <div class="col-lg-1 col-md-0 col-sm-0">
+    </div>
+    <div class="col-lg-10 col-md-12 col-sm-12">
+      <div class="card-deck">
+        <div class="row">
+          <% @cookings.each do |cooking1,cooking2| %>
+            <%= render 'users/card', cooking: cooking1 %>
+            <% if cooking2 != nil %>
+              <%= render 'users/card', cooking: cooking2 %>
+            <% end %>
+          <% end %>
+
+        </div>
+      </div>
+      <%= paginate @cookings %>
+    </div>
+   <div class="col-lg-1 col-md-0 col-sm-0"></div>
+  </div>
+</div>
+
+</div>
