@@ -131,7 +131,8 @@ body {
  justify-content: center;
 }
 
-.new-recipe {
+.new-recipe,
+.user-edit {
  height: 100vh;
  display: flex;
  justify-content: center;
@@ -141,7 +142,8 @@ body {
  background-position: 50% 100%;
 }
 
-.recipe-post-form {
+.recipe-post-form,
+.user-edit-form {
  color: white;
 }
 
