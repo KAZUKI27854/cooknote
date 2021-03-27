@@ -18,7 +18,7 @@
     <div class="wrapper">
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
-        <h2 class="fas fa-quran nav-header text-light">Cooknote</h2>
+        <h2 class="nav-header text-light">Cooknote</h2>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
@@ -27,26 +27,26 @@
         <ul class="navbar-nav ml-auto">
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "マイページ", user_path(current_user.id), class: ' fas fa-user nav-link text-light' %>
+          <%= link_to "マイページ", user_path(current_user.id), class: 'nav-link text-light' %>
         </li>
         <li class="nav-item">
-          <%= link_to "レシピ", cookings_path, class: 'fas fa-utensils nav-link text-light' %>
+          <%= link_to "レシピ", cookings_path, class: 'nav-link text-light' %>
         </li>
         <li class="nav-item">
-          <%= link_to "新規投稿", new_cooking_path, class: 'fas fa-file nav-link text-light' %>
+          <%= link_to "新規投稿", new_cooking_path, class: 'nav-link text-light' %>
         </li>
         <li class="nav-item">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'fas fa-sign-out-alt nav-link text-light' %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'nav-link text-light' %>
         </li>
       <% else %>
         <li class="nav-item">
           <%= link_to "新規登録", new_user_registration_path, class: 'fas fa-user-plus nav-link text-light' %>
         </li>
         <li class="nav-item">
-          <%= link_to "ログイン", new_user_session_path, class: 'fas fa-sign-in-alt nav-link text-light' %>
+          <%= link_to "ログイン", new_user_session_path, class: 'nav-link text-light' %>
         </li>
         <li>
-          <%= link_to "ホーム", root_path, class: 'fas fa-home nav-link text-light' %>
+          <%= link_to "ホーム", root_path, class: 'nav-link text-light' %>
         </li>
       <% end %>
       </ul>

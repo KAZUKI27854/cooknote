@@ -22,9 +22,15 @@
  padding: 0;
 }
 
+@font-face {
+ font-family: 'mushin';
+ src: font-url('/assets/mushin.otf')
+}
+
 html,
 body {
  height: 100vh;
+ font-family: 'mushin' !important;
 }
 
 .navbar {
